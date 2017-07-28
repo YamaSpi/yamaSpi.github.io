@@ -35,15 +35,16 @@ var filesToCache = [
   path + '/images/wind.png'
 ];
 
-self.addEventListener('install', (event) => {
-    event.waitUntil(
-        caches.open(cacheName)
-              .then((cache) => {
-                  // 指定されたリソースをキャッシュに追加する
-                  return cache.addAll(urlsToCache);
-              })
-    );
+self.addEventListener('install', function(e) {
+  console.log('[ServiceWorker] Install');
+  e.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      console.log('[ServiceWorker] Caching app shell');
+      return cache.addAll(filesToCache);
+    })
+  );
 });
+
 self.addEventListener('activate', function(e) {
   console.log('[ServiceWorker] Activate');
   e.waitUntil(
