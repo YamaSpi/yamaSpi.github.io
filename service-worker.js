@@ -14,7 +14,7 @@
 
 var dataCacheName = 'weatherData-v1';
 var cacheName = 'weatherPWA-final-1';
-var path = "/yamaspi.github.io";
+var path = "";
 var filesToCache = [
   path + '/',
   path + '/index.html',
