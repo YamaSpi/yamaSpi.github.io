@@ -364,7 +364,24 @@
   // TODO add service worker code here
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-             .register('../service-worker.js')
+             .register('/yamaspi.github.io/service-worker.js')
              .then(function() { console.log('Service Worker Registered'); });
   }
+
+
+/*if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/yamaspi.github.io/service-worker.js', { scope: '/yamaspi.github.io/' }).then(function(reg) {
+    // registration worked
+    console.log('Registration succeeded. Scope is ' + reg.scope);
+  }).catch(function(error) {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
+};*/
+
+
+
+  
 })();
+
+

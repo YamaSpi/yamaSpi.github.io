@@ -14,24 +14,25 @@
 
 var dataCacheName = 'weatherData-v1';
 var cacheName = 'weatherPWA-final-1';
+var path = "/yamaspi.github.io";
 var filesToCache = [
-  '/',
-  '/index.html',
-  '/scripts/app.js',
-  '/styles/inline.css',
-  '/images/clear.png',
-  '/cloudy-scattered-showers.png',
-  '/images/cloudy.png',
-  '/images/fog.png',
-  '/images/ic_add_white_24px.svg',
-  '/images/ic_refresh_white_24px.svg',
-  '/images/partly-cloudy.png',
-  '/images/rain.png',
-  '/images/scattered-showers.png',
-  '/images/sleet.png',
-  '/images/snow.png',
-  '/images/thunderstorm.png',
-  '/images/wind.png'
+  path + '/',
+  path + '/index.html',
+  path + '/scripts/app.js',
+  path + '/styles/inline.css',
+  path + '/images/clear.png',
+  //path + '/cloudy-scattered-showers.png',
+  path + '/images/cloudy.png',
+  path + '/images/fog.png',
+  //path + '/images/ic_add_white_24px.svg',
+  //path + '/images/ic_refresh_white_24px.svg',
+  path + '/images/partly-cloudy.png',
+  path + '/images/rain.png',
+  path + '/images/scattered-showers.png',
+  path + '/images/sleet.png',
+  path + '/images/snow.png',
+  path + '/images/thunderstorm.png',
+  path + '/images/wind.png'
 ];
 
 self.addEventListener('install', function(e) {
